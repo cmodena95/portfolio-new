@@ -5,13 +5,14 @@
   <%# </div> %>
 </div>
 
-<div class="home-menu">
-  <div class="home-menu-left">
+<div class="home-menu" data-controller="menu">
+  <div class="home-menu-left" data-menu-target="left">
     <div class="web-dev">
       <div class="d-flex">
         <h2>WEB DEVELOPMENT</h2>
         <div class="arrow-right arrow-red"></div>
       </div>
+      <%= image_tag("illustration-temp.png", class: "left-image") %>
     </div>
 
     <div class="design">
@@ -19,22 +20,24 @@
         <h2>DESIGN</h2>
         <div class="arrow-right arrow-cream"></div>
       </div>
+      <%= image_tag("illustration-temp.png", class: "left-image") %>
     </div>
   </div>
 
   <div class="home-menu-right">
-    <div class="about">
-      <div class="d-flex">
+    <div class="about" data-menu-target="about">
+      <div class="d-flex h-100">
         <h2>ABOUT</h2>
         <div class="arrow-right arrow-cream"></div>
       </div>
     </div>
 
     <div class="illustration">
-      <div class="d-flex">
+      <div class="d-flex" data-action="click->menu#illustrationOpen">
         <h2>ILLUSTRATION</h2>
         <div class="arrow-right arrow-blue"></div>
       </div>
+      <%= image_tag("illustration-temp.png", class: "illustration-image", data: { "menu-target": "illustrationImage" }) %>
     </div>
   </div>
 </div>

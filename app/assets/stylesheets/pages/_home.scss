@@ -6,8 +6,9 @@
   }
 }
 
-// 
 
+
+// MENU
 .home-menu {
   height: 982px;
   display: grid;
@@ -28,22 +29,23 @@
 }
 
 
-// SECTIONS
 
+// SECTIONS
 // LEFT
 .web-dev {
   background-color: $cream;
   padding: 52.5px;
+  text-align: center;
 
   h2 {
     color: $red;
   }
 }
 
-
 .design {
   background-color: $blue;
   padding: 52.5px;
+  text-align: center;
 
   h2 {
     color: $cream;
@@ -55,7 +57,6 @@
 .about {
   background-color: $red;
   padding: 52.5px;
-  // height: 20%;
 
   h2 {
     color: $cream;
@@ -65,7 +66,7 @@
 .illustration {
   background-color: $yellow;
   padding: 52.5px;
-  // height: 80%;
+  text-align: center;
 
   h2 {
     color: $blue;
@@ -73,3 +74,35 @@
 }
 
 
+
+
+// ANIMATIONS
+@keyframes left-vanish {
+  0%   {transform: translate(0, 0);}
+  100% {  transform: translate(-850px, 0px);}
+}
+
+.left-vanish {
+  animation: left-vanish 1s;
+}
+
+.hide-left {
+  transform: translate(-850px, 0px);
+}
+
+// 
+
+@keyframes right-vanish {
+  0%   {transform: translate(0, 0);}
+  100% {  transform: translate(850px, 0px);}
+}
+
+.right-vanish {
+  animation: right-vanish 1s;
+}
+
+.hide-right {
+  transform: translate(850px, 0px);
+}
+
+// 
