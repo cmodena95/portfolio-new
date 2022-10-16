@@ -1,5 +1,6 @@
 .banner {
-  padding: 150px 52.5px;
+  padding: 75px 52.5px;
+  display: flex;
 
   h1 {
     margin-bottom: 40px;
@@ -7,25 +8,14 @@
 }
 
 
-
-// MENU
+// HOME MENU
 .home-menu {
-  height: 982px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.home-menu-left, .home-menu-right {
-  height: 100%;
-  display: grid;
-}
-
-.home-menu-left {
-  grid-template-rows: 1fr 1fr;
-}
-
-.home-menu-right {
-  grid-template-rows: 1fr 3fr;
+.home-image {
+  height: 300px;
 }
 
 
@@ -67,10 +57,15 @@
   background-color: $yellow;
   padding: 52.5px;
   text-align: center;
+  cursor: pointer;
 
   h2 {
     color: $blue;
   }
+}
+
+.illustration.active {
+  padding: 0;
 }
 
 
@@ -92,6 +87,8 @@
 
 // 
 
+
+
 @keyframes right-vanish {
   0%   {transform: translate(0, 0);}
   100% {  transform: translate(850px, 0px);}
@@ -101,8 +98,101 @@
   animation: right-vanish 1s;
 }
 
+.right-vanish-slow {
+  animation: right-vanish 3s;
+}
+
 .hide-right {
   transform: translate(850px, 0px);
 }
 
 // 
+@keyframes up-vanish {
+  0%   {transform: translate(0, 0);}
+  100% {  transform: translate(0px, -460px);}
+}
+
+.up-vanish {
+  animation: up-vanish 1s;
+}
+
+.hide-up {
+  transform: translate(0px, -460px)
+}
+
+
+
+
+// ILLUSTRATION PAGE
+.active-illustration-title {
+  background-color: $yellow;
+  height: 100vh;
+  width: 150px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  transition: 0.5s ease all;
+
+  transform: translate(-150px, 0px);
+}
+
+.active-illustration-title-display {
+  transform: translate(0px, 0px);
+}
+
+
+
+@keyframes mover {
+  0.0% {
+    transform: scale(1) translate(-0px, 0) skew(0deg);
+  }
+  100% {
+    transform: scale(1) translate(-20%, 300px) skew(0deg) rotate(90deg);
+  }
+}
+
+@keyframes rotate {
+  0.0% {
+    transform: scale(1) translate(-0px, 0) skew(0deg);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0px) skew(0deg) rotate(-90deg);
+    margin-right: 25px;
+    // font-size: 64px;
+  }
+}
+
+@keyframes shrink-padding {
+  0.0% {
+    padding: 52.5px;
+  }
+  100% {
+    padding: 0;
+    font-size: 56px;
+  }
+}
+
+@keyframes shrink-letter-spacing {
+  0.0% {
+    letter-spacing: 7px;
+  }
+  100% {
+    letter-spacing: 0;
+    font-size: 54px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+// ILLUSTRATION BAR MOVE
+.bar-left {
+  transform: translate(-35%, 0px);
+  width: 100vw;
+}

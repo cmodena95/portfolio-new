@@ -1,43 +1,50 @@
-<div class="banner">
-  <%# <div class="container-lg"> %>
-    <h1>CAMILA MODENA</h1>
-    <h2>DEVELOPER, DESIGNER + ILLUSTRATOR</h2>
-  <%# </div> %>
-</div>
-
-<div class="home-menu" data-controller="menu">
-  <div class="home-menu-left" data-menu-target="left">
-    <div class="web-dev">
-      <div class="d-flex">
-        <h2>WEB DEVELOPMENT</h2>
-        <div class="arrow-right arrow-red"></div>
-      </div>
-      <%= image_tag("illustration-temp.png", class: "left-image") %>
+<div data-controller="menu">
+  <div class="banner" data-menu-target="banner">
+    <div>
+      <h1>CAMILA MODENA</h1>
+      <h2>DEVELOPER, DESIGNER + ILLUSTRATOR</h2>
     </div>
+    <%= image_tag('illustration-temp.png', class: "home-image") %>
+  </div>
 
-    <div class="design">
-      <div class="d-flex">
-        <h2>DESIGN</h2>
-        <div class="arrow-right arrow-cream"></div>
-      </div>
-      <%= image_tag("illustration-temp.png", class: "left-image") %>
+  <%# HIDDEN %>
+  <div class="illustration-page">
+    <div class="active-illustration-title hidden" data-menu-target="illustrationActive">
+      <h3>ILLUSTRATION</h3>
     </div>
   </div>
 
-  <div class="home-menu-right">
-    <div class="about" data-menu-target="about">
-      <div class="d-flex h-100">
-        <h2>ABOUT</h2>
-        <div class="arrow-right arrow-cream"></div>
+  <div class="home-menu" data-menu-target="menu">
+    <div data-menu-target="left">
+      <div class="web-dev">
+        <div class="d-flex">
+          <h2>WEB DEVELOPMENT</h2>
+          <div class="arrow-right arrow-red"></div>
+        </div>
+      </div>
+
+      <div class="design">
+        <div class="d-flex">
+          <h2>DESIGN</h2>
+          <div class="arrow-right arrow-cream"></div>
+        </div>
       </div>
     </div>
 
-    <div class="illustration">
-      <div class="d-flex" data-action="click->menu#illustrationOpen">
-        <h2>ILLUSTRATION</h2>
-        <div class="arrow-right arrow-blue"></div>
+    <div>
+      <div class="about" data-menu-target="about">
+        <div class="d-flex h-100">
+          <h2>ABOUT</h2>
+          <div class="arrow-right arrow-cream"></div>
+        </div>
       </div>
-      <%= image_tag("illustration-temp.png", class: "illustration-image", data: { "menu-target": "illustrationImage" }) %>
+
+      <div class="illustration" data-menu-target="illustrationSection" data-action="click->menu#illustrationOpen">
+        <div class="d-flex">
+          <h2>ILLUSTRATION</h2>
+          <div class="arrow-right arrow-blue" data-menu-target="illustrationArrow"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
