@@ -8,15 +8,28 @@
   </div>
 
   <%# HIDDEN %>
-  <div class="illustration-page">
+  <div class="illustration-page" data-controller="modal">
     <div class="active-illustration-title hidden" data-menu-target="illustrationActive">
       <h3>ILLUSTRATION</h3>
     </div>
 
     <div class="illustrations-grid hidden" data-menu-target="illustrationsGrid">
       <% @illustrations.each do |illustration| %>
-        <%= cl_image_tag illustration.image.key, class: "grid-img" %>
+        <%= cl_image_tag illustration.image.key, class: "grid-img", data: {action: "click->modal#open"} %>
       <% end %>
+
+
+        <div id="myModal" class="modal hidden" data-modal-target="modal">
+
+          <!-- The Close Button -->
+          <span class="close" data-action="click->modal#close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01"  data-modal-target="modalImg">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
     </div>
   </div>
 
