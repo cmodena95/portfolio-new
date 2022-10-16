@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["left", "about", "illustrationActive", "illustrationSection", "illustrationArrow", "banner", "menu"]
+  static targets = ["left", "about", "illustrationActive", "illustrationSection", "illustrationsGrid", "banner", "menu"]
 
   connect() {
     console.log("Hello from our first Stimulus controller")
@@ -29,6 +29,18 @@ export default class extends Controller {
 
     setTimeout(() => {
       this.illustrationActiveTarget.classList.remove("hidden");
+    }, "1000")
+
+    setTimeout(() => {
+      this.illustrationActiveTarget.classList.add("fixed");
+    }, "1000")
+
+    setTimeout(() => {
+      this.illustrationsGridTarget.classList.add("grid");
+    }, "1000")
+
+    setTimeout(() => {
+      this.illustrationsGridTarget.classList.add("fade-in");
     }, "1000")
 
     setTimeout(() => {

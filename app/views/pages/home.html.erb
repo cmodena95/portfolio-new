@@ -12,6 +12,12 @@
     <div class="active-illustration-title hidden" data-menu-target="illustrationActive">
       <h3>ILLUSTRATION</h3>
     </div>
+
+    <div class="illustrations-grid hidden" data-menu-target="illustrationsGrid">
+      <% @illustrations.each do |illustration| %>
+        <%= cl_image_tag illustration.image.key, class: "grid-img" %>
+      <% end %>
+    </div>
   </div>
 
   <div class="home-menu" data-menu-target="menu">

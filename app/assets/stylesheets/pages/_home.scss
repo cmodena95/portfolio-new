@@ -123,21 +123,7 @@
 
 
 
-// ILLUSTRATION PAGE
-.active-illustration-title {
-  background-color: $yellow;
-  height: 100vh;
-  width: 150px;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  transition: 0.5s ease all;
 
-  transform: translate(-150px, 0px);
-}
-
-.active-illustration-title-display {
-  transform: translate(0px, 0px);
-}
 
 
 
@@ -191,8 +177,3 @@
   left: 0;
 }
 
-// ILLUSTRATION BAR MOVE
-.bar-left {
-  transform: translate(-35%, 0px);
-  width: 100vw;
-}
