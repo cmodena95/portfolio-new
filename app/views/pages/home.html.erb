@@ -1,74 +1,21 @@
-<div data-controller="menu">
-  <div class="banner" data-menu-target="banner">
-    <div>
-      <h1>CAMILA MODENA</h1>
-      <h2>DEVELOPER, DESIGNER + ILLUSTRATOR</h2>
-    </div>
-    <%= image_tag('illustration-temp.png', class: "home-image") %>
-  </div>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
 
-  <%# HIDDEN %>
-  <div class="menu-btn hidden" data-menu-target="menuBtn">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
-  <div class="illustration-page" data-controller="modal">
-
-    <div class="active-illustration-title hidden" data-menu-target="illustrationActive">
-      <h3>ILLUSTRATION</h3>
-    </div>
-
-    <div class="illustrations-grid hidden" data-menu-target="illustrationsGrid">
-      <% @illustrations.each do |illustration| %>
-        <%= cl_image_tag illustration.image.key, class: "grid-img", data: {action: "click->modal#open"} %>
-      <% end %>
-
-
-        <div id="myModal" class="modal hidden" data-modal-target="modal">
-
-          <!-- The Close Button -->
-          <span class="close" data-action="click->modal#close">&times;</span>
-
-          <!-- Modal Content (The Image) -->
-          <img class="modal-content" id="img01"  data-modal-target="modalImg">
-
-          <!-- Modal Caption (Image Text) -->
-          <div id="caption"></div>
-        </div>
+<body class="bg-red">
+  <div class="parallax-bg">
+    <div class="container-lg">
+      <h1>Camila Modena</h1>
+      <h2>Web development,</h2>
+      <h2>illustration</h2>
+      <h2>+ design</h2>
     </div>
   </div>
 
-  <div class="home-menu" data-menu-target="menu">
-    <div data-menu-target="left">
-      <div class="web-dev">
-        <div class="d-flex">
-          <h2>WEB DEVELOPMENT</h2>
-          <div class="arrow-right arrow-red"></div>
-        </div>
-      </div>
-
-      <div class="design">
-        <div class="d-flex">
-          <h2>DESIGN</h2>
-          <div class="arrow-right arrow-cream"></div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="about" data-menu-target="about">
-        <div class="d-flex h-100">
-          <h2>ABOUT</h2>
-          <div class="arrow-right arrow-cream"></div>
-        </div>
-      </div>
-
-      <div class="illustration" data-menu-target="illustrationSection" data-action="click->menu#illustrationOpen">
-        <div class="d-flex">
-          <h2>ILLUSTRATION</h2>
-          <div class="arrow-right arrow-blue" data-menu-target="illustrationArrow"></div>
-        </div>
-      </div>
-    </div>
+  <div class="section">
+    dfksldf
   </div>
-</div>
+</body>
+
