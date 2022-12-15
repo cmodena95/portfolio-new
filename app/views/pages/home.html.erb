@@ -5,17 +5,36 @@
 </head>
 
 <body class="bg-red">
-  <div class="parallax-bg">
+  <div class="parallax-bg-header">
     <div class="container-lg">
-      <h1>Camila Modena</h1>
-      <h2>Web development,</h2>
-      <h2>illustration</h2>
-      <h2>+ design</h2>
+      <h1 class="font-black">Camila Modena</h1>
+      <h2 class="font-white">Web development,</h2>
+      <h2 class="font-white">illustration</h2>
+      <h2 class="font-white">+ design</h2>
     </div>
   </div>
 
   <div class="section">
-    dfksldf
+    <div class="grid">
+      <% @illustrations.last(8).each do |illustration| %>
+        <%= cl_image_tag(illustration.image.key, class: "grid-img") %>
+      <% end %>
+    </div>
+    <div class="d-flex justify-end mr-1">
+      <h2>
+        <%= link_to "ILLUSTRATIONS" %>
+      </h2>
+      <div class="arrow-right"></div>
+    </div>
+  </div>
+
+  <div class="parallax-bg-header">
+    <div class="container-md outline-white">
+      <h2 class="font-white">I like working with NGOs and small businesses</h2>
+      <p class="font-white">write a bit about why write a bit about why write a bit about why</p>
+      <p class="font-white">write a bit about why write a bit about why write a bit about why</p>
+      <p class="font-white">write a bit about why write a bit about why write a bit about why</p>
+    </div>
   </div>
 </body>
 

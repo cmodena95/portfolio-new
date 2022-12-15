@@ -1,4 +1,8 @@
-.container-lg {
+.container-lg, .container-md {
   width: 90%;
   margin: 0 auto;
+}
+
+.container-md {
+  padding: 3rem;
 }

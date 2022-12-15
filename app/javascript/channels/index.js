@@ -13,10 +13,16 @@ Stimulus.load(definitionsFromContext(context))
 
 
 window.addEventListener("scroll", function() {
+  // console.log(document.querySelector(".parallax-bg-header"))
+  // console.log(window.scrollY)
   const distance = window.scrollY
   document.querySelector(".container-lg").style.transform = `translateY(${distance *
     1}px)`
   document.querySelector(
-    ".container"
-  ).style.transform = `translateY(${distance * 0.3}px)`
+    ".container-lg"
+  ).style.transform = `translateY(${distance * 0.6}px)`
+
+  // if (window.scrollY > 402 || window.scrollY < 410) {
+  //   document.querySelector(".parallax-bg-header").classList.add("hidden")
+  // }
 })

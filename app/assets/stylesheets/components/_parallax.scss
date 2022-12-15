@@ -1,16 +1,16 @@
 .section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: right;
   z-index: 1;
-  height: 100vh;
-  font-size: 5rem;
-  background: #fcdb6d;
-  color: #0056a7;
+  min-height: 100vh;
   width: 100%;
+
+  a {
+    text-decoration: none;
+    // color: $cream;
+  }
 }
 
-.parallax-bg {
+.parallax-bg-header, .parallax-bg-illustration {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,7 +19,6 @@
   z-index: -1;
   animation: fadeIn 1.5s ease-in-out;
 }
-
 
 .animate-me {
   animation: bounceIn 3s ease-in-out;

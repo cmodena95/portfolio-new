@@ -1,0 +1,11 @@
+#illustration-section {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 25px;
+}
